@@ -21,21 +21,32 @@ Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.5.0
 Dialog DLL:      TCM.DLL V1.36.1.0
  
 <h2>Project:</h2>
-C:\Users\admin\Documents\hoc hanh\htn\stm32config\configstm32.uvprojx
-Project File Date:  05/22/2023
+C:\Users\admin\Documents\hoc hanh\htn\stm32_finalterm\finalterm.uvprojx
+Project File Date:  06/07/2023
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
-Build target 'Target 1'
+Rebuild target 'Target 1'
+assembling startup_stm32f10x_md.s...
+compiling GPIO.c...
+compiling MPU6050.c...
+compiling system_stm32f10x.c...
+compiling lcd.c...
 compiling main.c...
-main.c(22): warning:  #223-D: function "lcd_put_cur" declared implicitly
-  			 lcd_put_cur(0,0);
-main.c(23): warning:  #223-D: function "lcd_send_string" declared implicitly
-  			 lcd_send_string("tao da khoc");
-main.c: 2 warnings, 0 errors
+step.h(1): warning:  #1-D: last line of file ends without a newline
+  void	StepCouting(int *stepcount);
+GPIO.h(1): warning:  #1295-D: Deprecated declaration InitGPIO - give arg types
+  void InitGPIO();
+main.c(67): warning:  #1-D: last line of file ends without a newline
+  }
+main.c: 3 warnings, 0 errors
+compiling i2c.c...
+i2c.c(130): warning:  #1-D: last line of file ends without a newline
+  }
+i2c.c: 1 warning, 0 errors
 linking...
-Program Size: Code=1384 RO-data=252 RW-data=0 ZI-data=1632  
-".\Objects\configstm32.axf" - 0 Error(s), 2 Warning(s).
+Program Size: Code=5284 RO-data=268 RW-data=56 ZI-data=1632  
+".\Objects\finalterm.axf" - 0 Error(s), 4 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -62,11 +73,11 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.1.2
 
    * Component: Keil::Device:Startup:1.0.0
-      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
-      Source file:   Device\Source\ARM\startup_stm32f10x_md.s
       Source file:   Device\Source\system_stm32f10x.c
+      Source file:   Device\Source\ARM\startup_stm32f10x_md.s
       Include file:  RTE_Driver\Config\RTE_Device.h
-Build Time Elapsed:  00:00:01
+      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
+Build Time Elapsed:  00:00:00
 </pre>
 </body>
 </html>

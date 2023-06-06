@@ -1,0 +1,1 @@
+void	StepCouting(int *stepcount);

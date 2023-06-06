@@ -8,5 +8,12 @@ uint8_t i2c_readByte(uint8_t last);
 void i2c_write(uint8_t address, uint8_t* data, uint16_t length);
 void i2c_read(uint8_t address, uint8_t* data, uint16_t length);
 
-void I2C_Init1(void);
-void I2C_Send_Address1(uint8_t address, uint8_t direction);
+
+void I2C_Read(uint8_t address, uint8_t *buffer, uint8_t size);
+void I2C_Write(uint8_t data);
+void I2C_Address(uint8_t address);
+
+
+
+
+

@@ -8,4 +8,8 @@
 .\objects\main.o: C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h
 .\objects\main.o: C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h
 .\objects\main.o: i2c.h
+.\objects\main.o: MPU6050.h
 .\objects\main.o: lcd.h
+.\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\main.o: step.h
+.\objects\main.o: GPIO.h

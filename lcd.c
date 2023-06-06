@@ -16,7 +16,6 @@ void lcd_send_cmd (char cmd)
 	i2c_start();
 	i2c_sendAddress(LCD_ADD,0);
 	char data_u, data_l;
-//	uint8_t data_t[4];
 	data_u = (cmd&0xf0);
 	data_l = ((cmd<<4)&0xf0);
 	i2c_writeByte(data_u|0x0C);  //en=1, rs=0
@@ -24,8 +23,6 @@ void lcd_send_cmd (char cmd)
 	i2c_writeByte(data_l|0x0C);  //en=1, rs=0
 	i2c_writeByte(data_l|0x08);  //en=0, rs=0
 	i2c_stop();
-	//i2c_write(LCD_ADD,data_t,4);
-
 }
 void lcd_send_data (char data)
 {
@@ -49,7 +46,7 @@ void lcd_init (void)
 	delay_ms(5);  // wait for >4.1ms
 	lcd_send_cmd (0x30);
 	delay_ms(1);  // wait for >100us
-	lcd_send_cmd (0x30);
+	lcd_send_cmd (0x30); // kich hoat lcd
 	delay_ms(10);
 	lcd_send_cmd (0x20);  // 4bit mode
 	delay_ms(10);
