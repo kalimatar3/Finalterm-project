@@ -6,12 +6,7 @@ void InitGPIO()
 		RCC->APB2ENR |= RCC_APB2ENR_IOPAEN; 
 		GPIOA->CRH &= ~(0xF << 4);              
     GPIOA->CRH |= (0x8 << 4);   
-		GPIOA->ODR = 0x01;
-		
-		GPIOA->CRH &= ~(0xF << 8);            
-    GPIOA->CRH |= (0x8 << 8);   
-		GPIOA->ODR = 0x01;
-
+		GPIOA->ODR |= 1u<<9;
 		
 		//config LED
 		RCC->APB2ENR |= RCC_APB2ENR_IOPCEN;

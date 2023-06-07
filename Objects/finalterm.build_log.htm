@@ -28,24 +28,24 @@ Project File Date:  06/07/2023
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Rebuild target 'Target 1'
 assembling startup_stm32f10x_md.s...
-compiling GPIO.c...
-compiling MPU6050.c...
-compiling system_stm32f10x.c...
-compiling lcd.c...
 compiling main.c...
 step.h(1): warning:  #1-D: last line of file ends without a newline
   void	StepCouting(int *stepcount);
 GPIO.h(1): warning:  #1295-D: Deprecated declaration InitGPIO - give arg types
   void InitGPIO();
-main.c(67): warning:  #1-D: last line of file ends without a newline
+main.c(71): warning:  #1-D: last line of file ends without a newline
   }
 main.c: 3 warnings, 0 errors
+compiling GPIO.c...
+compiling lcd.c...
+compiling system_stm32f10x.c...
+compiling MPU6050.c...
 compiling i2c.c...
 i2c.c(130): warning:  #1-D: last line of file ends without a newline
   }
 i2c.c: 1 warning, 0 errors
 linking...
-Program Size: Code=5284 RO-data=268 RW-data=56 ZI-data=1632  
+Program Size: Code=5220 RO-data=268 RW-data=56 ZI-data=1632  
 ".\Objects\finalterm.axf" - 0 Error(s), 4 Warning(s).
 
 <h2>Software Packages used:</h2>
@@ -73,11 +73,11 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.1.2
 
    * Component: Keil::Device:Startup:1.0.0
-      Source file:   Device\Source\system_stm32f10x.c
       Source file:   Device\Source\ARM\startup_stm32f10x_md.s
-      Include file:  RTE_Driver\Config\RTE_Device.h
+      Source file:   Device\Source\system_stm32f10x.c
       Source file:   Device\Source\ARM\STM32F1xx_OPT.s
-Build Time Elapsed:  00:00:00
+      Include file:  RTE_Driver\Config\RTE_Device.h
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>

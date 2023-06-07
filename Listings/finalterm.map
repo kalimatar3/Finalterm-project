@@ -4,19 +4,22 @@ Component: ARM Compiler 5.06 update 6 (build 750) Tool: armlink [4d35ed]
 
 Section Cross References
 
+    main.o(i.EXTI9_5_IRQHandler) refers to lcd.o(i.delay_ms) for delay_ms
+    main.o(i.EXTI9_5_IRQHandler) refers to main.o(.data) for mode
     main.o(i.main) refers to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     main.o(i.main) refers to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
     main.o(i.main) refers to _printf_dec.o(.text) for _printf_int_dec
+    main.o(i.main) refers to gpio.o(i.InitGPIO) for InitGPIO
     main.o(i.main) refers to i2c.o(i.i2c_init) for i2c_init
     main.o(i.main) refers to mpu6050.o(i.MPU6050_Init) for MPU6050_Init
     main.o(i.main) refers to lcd.o(i.lcd_init) for lcd_init
-    main.o(i.main) refers to gpio.o(i.InitGPIO) for InitGPIO
-    main.o(i.main) refers to main.o(i.EXTI_A8_config) for EXTI_A8_config
-    main.o(i.main) refers to mpu6050.o(i.MPU6050_Counter) for MPU6050_Counter
+    main.o(i.main) refers to main.o(i.EXTI_A9_config) for EXTI_A9_config
     main.o(i.main) refers to noretval__2sprintf.o(.text) for __2sprintf
     main.o(i.main) refers to lcd.o(i.delay_ms) for delay_ms
     main.o(i.main) refers to lcd.o(i.lcd_put_cur) for lcd_put_cur
+    main.o(i.main) refers to lcd.o(i.lcd_send_data) for lcd_send_data
     main.o(i.main) refers to lcd.o(i.lcd_send_string) for lcd_send_string
+    main.o(i.main) refers to mpu6050.o(i.MPU6050_Counter) for MPU6050_Counter
     main.o(i.main) refers to main.o(.data) for buffer3
     mpu6050.o(i.MPU6050_Counter) refers to mpu6050.o(i.MPU6050_Read_AccelZ) for MPU6050_Read_AccelZ
     mpu6050.o(i.MPU6050_Counter) refers to daddsub_clz.o(x$fpl$dsub) for __aeabi_dsub
@@ -434,48 +437,48 @@ Image Symbol Table
     .text                                    0x0800043c   Section        2  use_no_semi.o(.text)
     .text                                    0x0800043e   Section        0  indicate_semi.o(.text)
     i.EXTI9_5_IRQHandler                     0x08000440   Section        0  main.o(i.EXTI9_5_IRQHandler)
-    i.EXTI_A8_config                         0x080004c4   Section        0  main.o(i.EXTI_A8_config)
-    i.I2C_Address                            0x08000550   Section        0  i2c.o(i.I2C_Address)
-    i.I2C_Read                               0x0800057c   Section        0  i2c.o(i.I2C_Read)
-    i.I2C_Write                              0x08000690   Section        0  i2c.o(i.I2C_Write)
-    i.InitGPIO                               0x080006b8   Section        0  gpio.o(i.InitGPIO)
-    i.MPU6050_Counter                        0x08000730   Section        0  mpu6050.o(i.MPU6050_Counter)
-    i.MPU6050_Init                           0x080007a0   Section        0  mpu6050.o(i.MPU6050_Init)
-    i.MPU6050_Read_AccelZ                    0x080007e8   Section        0  mpu6050.o(i.MPU6050_Read_AccelZ)
-    i.MPU_Read                               0x08000834   Section        0  mpu6050.o(i.MPU_Read)
-    i.MPU_Write                              0x08000868   Section        0  mpu6050.o(i.MPU_Write)
-    i.SetSysClock                            0x0800088c   Section        0  system_stm32f10x.o(i.SetSysClock)
-    SetSysClock                              0x0800088d   Thumb Code     8  system_stm32f10x.o(i.SetSysClock)
-    i.SetSysClockTo72                        0x08000894   Section        0  system_stm32f10x.o(i.SetSysClockTo72)
-    SetSysClockTo72                          0x08000895   Thumb Code   214  system_stm32f10x.o(i.SetSysClockTo72)
-    i.SystemInit                             0x08000974   Section        0  system_stm32f10x.o(i.SystemInit)
-    i.delay_ms                               0x080009d4   Section        0  lcd.o(i.delay_ms)
-    i.i2c_init                               0x080009f8   Section        0  i2c.o(i.i2c_init)
-    i.i2c_sendAddress                        0x08000a78   Section        0  i2c.o(i.i2c_sendAddress)
-    i.i2c_start                              0x08000aa8   Section        0  i2c.o(i.i2c_start)
-    i.i2c_stop                               0x08000acc   Section        0  i2c.o(i.i2c_stop)
-    i.i2c_writeByte                          0x08000ae0   Section        0  i2c.o(i.i2c_writeByte)
-    i.lcd_init                               0x08000b08   Section        0  lcd.o(i.lcd_init)
-    i.lcd_put_cur                            0x08000b78   Section        0  lcd.o(i.lcd_put_cur)
-    i.lcd_send_cmd                           0x08000b9c   Section        0  lcd.o(i.lcd_send_cmd)
-    i.lcd_send_data                          0x08000bdc   Section        0  lcd.o(i.lcd_send_data)
-    i.lcd_send_string                        0x08000c1c   Section        0  lcd.o(i.lcd_send_string)
-    i.main                                   0x08000c34   Section        0  main.o(i.main)
-    x$fpl$dadd                               0x08000c94   Section      336  daddsub_clz.o(x$fpl$dadd)
-    _dadd1                                   0x08000ca5   Thumb Code     0  daddsub_clz.o(x$fpl$dadd)
-    x$fpl$dcmpinf                            0x08000de4   Section       24  dcmpi.o(x$fpl$dcmpinf)
-    x$fpl$ddiv                               0x08000dfc   Section      688  ddiv.o(x$fpl$ddiv)
-    ddiv_entry                               0x08000e03   Thumb Code     0  ddiv.o(x$fpl$ddiv)
-    x$fpl$dflt                               0x080010ac   Section       46  dflt_clz.o(x$fpl$dflt)
-    x$fpl$dleqf                              0x080010dc   Section      120  dleqf.o(x$fpl$dleqf)
-    x$fpl$dmul                               0x08001154   Section      340  dmul.o(x$fpl$dmul)
-    x$fpl$dnaninf                            0x080012a8   Section      156  dnaninf.o(x$fpl$dnaninf)
-    x$fpl$dretinf                            0x08001344   Section       12  dretinf.o(x$fpl$dretinf)
-    x$fpl$drleqf                             0x08001350   Section      108  drleqf.o(x$fpl$drleqf)
-    x$fpl$dsub                               0x080013bc   Section      468  daddsub_clz.o(x$fpl$dsub)
-    _dsub1                                   0x080013cd   Thumb Code     0  daddsub_clz.o(x$fpl$dsub)
-    x$fpl$usenofp                            0x08001590   Section        0  usenofp.o(x$fpl$usenofp)
-    .data                                    0x20000000   Section       16  main.o(.data)
+    i.EXTI_A9_config                         0x08000478   Section        0  main.o(i.EXTI_A9_config)
+    i.I2C_Address                            0x08000504   Section        0  i2c.o(i.I2C_Address)
+    i.I2C_Read                               0x08000530   Section        0  i2c.o(i.I2C_Read)
+    i.I2C_Write                              0x08000644   Section        0  i2c.o(i.I2C_Write)
+    i.InitGPIO                               0x0800066c   Section        0  gpio.o(i.InitGPIO)
+    i.MPU6050_Counter                        0x080006d0   Section        0  mpu6050.o(i.MPU6050_Counter)
+    i.MPU6050_Init                           0x08000740   Section        0  mpu6050.o(i.MPU6050_Init)
+    i.MPU6050_Read_AccelZ                    0x08000788   Section        0  mpu6050.o(i.MPU6050_Read_AccelZ)
+    i.MPU_Read                               0x080007d4   Section        0  mpu6050.o(i.MPU_Read)
+    i.MPU_Write                              0x08000808   Section        0  mpu6050.o(i.MPU_Write)
+    i.SetSysClock                            0x0800082c   Section        0  system_stm32f10x.o(i.SetSysClock)
+    SetSysClock                              0x0800082d   Thumb Code     8  system_stm32f10x.o(i.SetSysClock)
+    i.SetSysClockTo72                        0x08000834   Section        0  system_stm32f10x.o(i.SetSysClockTo72)
+    SetSysClockTo72                          0x08000835   Thumb Code   214  system_stm32f10x.o(i.SetSysClockTo72)
+    i.SystemInit                             0x08000914   Section        0  system_stm32f10x.o(i.SystemInit)
+    i.delay_ms                               0x08000974   Section        0  lcd.o(i.delay_ms)
+    i.i2c_init                               0x08000998   Section        0  i2c.o(i.i2c_init)
+    i.i2c_sendAddress                        0x08000a18   Section        0  i2c.o(i.i2c_sendAddress)
+    i.i2c_start                              0x08000a48   Section        0  i2c.o(i.i2c_start)
+    i.i2c_stop                               0x08000a6c   Section        0  i2c.o(i.i2c_stop)
+    i.i2c_writeByte                          0x08000a80   Section        0  i2c.o(i.i2c_writeByte)
+    i.lcd_init                               0x08000aa8   Section        0  lcd.o(i.lcd_init)
+    i.lcd_put_cur                            0x08000b18   Section        0  lcd.o(i.lcd_put_cur)
+    i.lcd_send_cmd                           0x08000b3c   Section        0  lcd.o(i.lcd_send_cmd)
+    i.lcd_send_data                          0x08000b7c   Section        0  lcd.o(i.lcd_send_data)
+    i.lcd_send_string                        0x08000bbc   Section        0  lcd.o(i.lcd_send_string)
+    i.main                                   0x08000bd4   Section        0  main.o(i.main)
+    x$fpl$dadd                               0x08000c54   Section      336  daddsub_clz.o(x$fpl$dadd)
+    _dadd1                                   0x08000c65   Thumb Code     0  daddsub_clz.o(x$fpl$dadd)
+    x$fpl$dcmpinf                            0x08000da4   Section       24  dcmpi.o(x$fpl$dcmpinf)
+    x$fpl$ddiv                               0x08000dbc   Section      688  ddiv.o(x$fpl$ddiv)
+    ddiv_entry                               0x08000dc3   Thumb Code     0  ddiv.o(x$fpl$ddiv)
+    x$fpl$dflt                               0x0800106c   Section       46  dflt_clz.o(x$fpl$dflt)
+    x$fpl$dleqf                              0x0800109c   Section      120  dleqf.o(x$fpl$dleqf)
+    x$fpl$dmul                               0x08001114   Section      340  dmul.o(x$fpl$dmul)
+    x$fpl$dnaninf                            0x08001268   Section      156  dnaninf.o(x$fpl$dnaninf)
+    x$fpl$dretinf                            0x08001304   Section       12  dretinf.o(x$fpl$dretinf)
+    x$fpl$drleqf                             0x08001310   Section      108  drleqf.o(x$fpl$drleqf)
+    x$fpl$dsub                               0x0800137c   Section      468  daddsub_clz.o(x$fpl$dsub)
+    _dsub1                                   0x0800138d   Thumb Code     0  daddsub_clz.o(x$fpl$dsub)
+    x$fpl$usenofp                            0x08001550   Section        0  usenofp.o(x$fpl$usenofp)
+    .data                                    0x20000000   Section       12  main.o(.data)
     .data                                    0x20000010   Section       40  mpu6050.o(.data)
     .bss                                     0x20000038   Section       96  libspace.o(.bss)
     HEAP                                     0x20000098   Section      512  startup_stm32f10x_md.o(HEAP)
@@ -647,55 +650,54 @@ Image Symbol Table
     __I$use$semihosting                      0x0800043d   Thumb Code     0  use_no_semi.o(.text)
     __use_no_semihosting_swi                 0x0800043d   Thumb Code     2  use_no_semi.o(.text)
     __semihosting_library_function           0x0800043f   Thumb Code     0  indicate_semi.o(.text)
-    EXTI9_5_IRQHandler                       0x08000441   Thumb Code   112  main.o(i.EXTI9_5_IRQHandler)
-    EXTI_A8_config                           0x080004c5   Thumb Code   128  main.o(i.EXTI_A8_config)
-    I2C_Address                              0x08000551   Thumb Code    38  i2c.o(i.I2C_Address)
-    I2C_Read                                 0x0800057d   Thumb Code   272  i2c.o(i.I2C_Read)
-    I2C_Write                                0x08000691   Thumb Code    36  i2c.o(i.I2C_Write)
-    InitGPIO                                 0x080006b9   Thumb Code   108  gpio.o(i.InitGPIO)
-    MPU6050_Counter                          0x08000731   Thumb Code    92  mpu6050.o(i.MPU6050_Counter)
-    MPU6050_Init                             0x080007a1   Thumb Code    72  mpu6050.o(i.MPU6050_Init)
-    MPU6050_Read_AccelZ                      0x080007e9   Thumb Code    64  mpu6050.o(i.MPU6050_Read_AccelZ)
-    MPU_Read                                 0x08000835   Thumb Code    52  mpu6050.o(i.MPU_Read)
-    MPU_Write                                0x08000869   Thumb Code    36  mpu6050.o(i.MPU_Write)
-    SystemInit                               0x08000975   Thumb Code    78  system_stm32f10x.o(i.SystemInit)
-    delay_ms                                 0x080009d5   Thumb Code    34  lcd.o(i.delay_ms)
-    i2c_init                                 0x080009f9   Thumb Code   116  i2c.o(i.i2c_init)
-    i2c_sendAddress                          0x08000a79   Thumb Code    44  i2c.o(i.i2c_sendAddress)
-    i2c_start                                0x08000aa9   Thumb Code    30  i2c.o(i.i2c_start)
-    i2c_stop                                 0x08000acd   Thumb Code    14  i2c.o(i.i2c_stop)
-    i2c_writeByte                            0x08000ae1   Thumb Code    36  i2c.o(i.i2c_writeByte)
-    lcd_init                                 0x08000b09   Thumb Code   112  lcd.o(i.lcd_init)
-    lcd_put_cur                              0x08000b79   Thumb Code    36  lcd.o(i.lcd_put_cur)
-    lcd_send_cmd                             0x08000b9d   Thumb Code    64  lcd.o(i.lcd_send_cmd)
-    lcd_send_data                            0x08000bdd   Thumb Code    64  lcd.o(i.lcd_send_data)
-    lcd_send_string                          0x08000c1d   Thumb Code    22  lcd.o(i.lcd_send_string)
-    main                                     0x08000c35   Thumb Code    74  main.o(i.main)
-    __aeabi_dadd                             0x08000c95   Thumb Code     0  daddsub_clz.o(x$fpl$dadd)
-    _dadd                                    0x08000c95   Thumb Code   332  daddsub_clz.o(x$fpl$dadd)
-    __fpl_dcmp_Inf                           0x08000de5   Thumb Code    24  dcmpi.o(x$fpl$dcmpinf)
-    __aeabi_ddiv                             0x08000dfd   Thumb Code     0  ddiv.o(x$fpl$ddiv)
-    _ddiv                                    0x08000dfd   Thumb Code   552  ddiv.o(x$fpl$ddiv)
-    __aeabi_i2d                              0x080010ad   Thumb Code     0  dflt_clz.o(x$fpl$dflt)
-    _dflt                                    0x080010ad   Thumb Code    46  dflt_clz.o(x$fpl$dflt)
-    __aeabi_cdcmple                          0x080010dd   Thumb Code     0  dleqf.o(x$fpl$dleqf)
-    _dcmple                                  0x080010dd   Thumb Code   120  dleqf.o(x$fpl$dleqf)
-    __fpl_dcmple_InfNaN                      0x0800113f   Thumb Code     0  dleqf.o(x$fpl$dleqf)
-    __aeabi_dmul                             0x08001155   Thumb Code     0  dmul.o(x$fpl$dmul)
-    _dmul                                    0x08001155   Thumb Code   332  dmul.o(x$fpl$dmul)
-    __fpl_dnaninf                            0x080012a9   Thumb Code   156  dnaninf.o(x$fpl$dnaninf)
-    __fpl_dretinf                            0x08001345   Thumb Code    12  dretinf.o(x$fpl$dretinf)
-    __aeabi_cdrcmple                         0x08001351   Thumb Code     0  drleqf.o(x$fpl$drleqf)
-    _drcmple                                 0x08001351   Thumb Code   108  drleqf.o(x$fpl$drleqf)
-    __aeabi_dsub                             0x080013bd   Thumb Code     0  daddsub_clz.o(x$fpl$dsub)
-    _dsub                                    0x080013bd   Thumb Code   464  daddsub_clz.o(x$fpl$dsub)
-    Region$$Table$$Base                      0x08001590   Number         0  anon$$obj.o(Region$$Table)
-    __I$use$fp                               0x08001590   Number         0  usenofp.o(x$fpl$usenofp)
-    Region$$Table$$Limit                     0x080015b0   Number         0  anon$$obj.o(Region$$Table)
+    EXTI9_5_IRQHandler                       0x08000441   Thumb Code    48  main.o(i.EXTI9_5_IRQHandler)
+    EXTI_A9_config                           0x08000479   Thumb Code   128  main.o(i.EXTI_A9_config)
+    I2C_Address                              0x08000505   Thumb Code    38  i2c.o(i.I2C_Address)
+    I2C_Read                                 0x08000531   Thumb Code   272  i2c.o(i.I2C_Read)
+    I2C_Write                                0x08000645   Thumb Code    36  i2c.o(i.I2C_Write)
+    InitGPIO                                 0x0800066d   Thumb Code    86  gpio.o(i.InitGPIO)
+    MPU6050_Counter                          0x080006d1   Thumb Code    92  mpu6050.o(i.MPU6050_Counter)
+    MPU6050_Init                             0x08000741   Thumb Code    72  mpu6050.o(i.MPU6050_Init)
+    MPU6050_Read_AccelZ                      0x08000789   Thumb Code    64  mpu6050.o(i.MPU6050_Read_AccelZ)
+    MPU_Read                                 0x080007d5   Thumb Code    52  mpu6050.o(i.MPU_Read)
+    MPU_Write                                0x08000809   Thumb Code    36  mpu6050.o(i.MPU_Write)
+    SystemInit                               0x08000915   Thumb Code    78  system_stm32f10x.o(i.SystemInit)
+    delay_ms                                 0x08000975   Thumb Code    34  lcd.o(i.delay_ms)
+    i2c_init                                 0x08000999   Thumb Code   116  i2c.o(i.i2c_init)
+    i2c_sendAddress                          0x08000a19   Thumb Code    44  i2c.o(i.i2c_sendAddress)
+    i2c_start                                0x08000a49   Thumb Code    30  i2c.o(i.i2c_start)
+    i2c_stop                                 0x08000a6d   Thumb Code    14  i2c.o(i.i2c_stop)
+    i2c_writeByte                            0x08000a81   Thumb Code    36  i2c.o(i.i2c_writeByte)
+    lcd_init                                 0x08000aa9   Thumb Code   112  lcd.o(i.lcd_init)
+    lcd_put_cur                              0x08000b19   Thumb Code    36  lcd.o(i.lcd_put_cur)
+    lcd_send_cmd                             0x08000b3d   Thumb Code    64  lcd.o(i.lcd_send_cmd)
+    lcd_send_data                            0x08000b7d   Thumb Code    64  lcd.o(i.lcd_send_data)
+    lcd_send_string                          0x08000bbd   Thumb Code    22  lcd.o(i.lcd_send_string)
+    main                                     0x08000bd5   Thumb Code   102  main.o(i.main)
+    __aeabi_dadd                             0x08000c55   Thumb Code     0  daddsub_clz.o(x$fpl$dadd)
+    _dadd                                    0x08000c55   Thumb Code   332  daddsub_clz.o(x$fpl$dadd)
+    __fpl_dcmp_Inf                           0x08000da5   Thumb Code    24  dcmpi.o(x$fpl$dcmpinf)
+    __aeabi_ddiv                             0x08000dbd   Thumb Code     0  ddiv.o(x$fpl$ddiv)
+    _ddiv                                    0x08000dbd   Thumb Code   552  ddiv.o(x$fpl$ddiv)
+    __aeabi_i2d                              0x0800106d   Thumb Code     0  dflt_clz.o(x$fpl$dflt)
+    _dflt                                    0x0800106d   Thumb Code    46  dflt_clz.o(x$fpl$dflt)
+    __aeabi_cdcmple                          0x0800109d   Thumb Code     0  dleqf.o(x$fpl$dleqf)
+    _dcmple                                  0x0800109d   Thumb Code   120  dleqf.o(x$fpl$dleqf)
+    __fpl_dcmple_InfNaN                      0x080010ff   Thumb Code     0  dleqf.o(x$fpl$dleqf)
+    __aeabi_dmul                             0x08001115   Thumb Code     0  dmul.o(x$fpl$dmul)
+    _dmul                                    0x08001115   Thumb Code   332  dmul.o(x$fpl$dmul)
+    __fpl_dnaninf                            0x08001269   Thumb Code   156  dnaninf.o(x$fpl$dnaninf)
+    __fpl_dretinf                            0x08001305   Thumb Code    12  dretinf.o(x$fpl$dretinf)
+    __aeabi_cdrcmple                         0x08001311   Thumb Code     0  drleqf.o(x$fpl$drleqf)
+    _drcmple                                 0x08001311   Thumb Code   108  drleqf.o(x$fpl$drleqf)
+    __aeabi_dsub                             0x0800137d   Thumb Code     0  daddsub_clz.o(x$fpl$dsub)
+    _dsub                                    0x0800137d   Thumb Code   464  daddsub_clz.o(x$fpl$dsub)
+    Region$$Table$$Base                      0x08001550   Number         0  anon$$obj.o(Region$$Table)
+    __I$use$fp                               0x08001550   Number         0  usenofp.o(x$fpl$usenofp)
+    Region$$Table$$Limit                     0x08001570   Number         0  anon$$obj.o(Region$$Table)
     buffer3                                  0x20000000   Data           4  main.o(.data)
     step                                     0x20000004   Data           4  main.o(.data)
     mode                                     0x20000008   Data           4  main.o(.data)
-    count                                    0x2000000c   Data           4  main.o(.data)
     Accel_X_RAW                              0x20000010   Data           2  mpu6050.o(.data)
     Accel_Y_RAW                              0x20000012   Data           2  mpu6050.o(.data)
     Accel_Z_RAW                              0x20000014   Data           2  mpu6050.o(.data)
@@ -717,9 +719,9 @@ Memory Map of the image
 
   Image Entry point : 0x08000191
 
-  Load Region LR_1 (Base: 0x08000000, Size: 0x000015e8, Max: 0xffffffff, ABSOLUTE)
+  Load Region LR_1 (Base: 0x08000000, Size: 0x000015a8, Max: 0xffffffff, ABSOLUTE)
 
-    Execution Region ER_RO (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x000015b0, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RO (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00001570, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -789,58 +791,59 @@ Memory Map of the image
     0x0800043c   0x0800043c   0x00000002   Code   RO          536    .text               c_w.l(use_no_semi.o)
     0x0800043e   0x0800043e   0x00000000   Code   RO          538    .text               c_w.l(indicate_semi.o)
     0x0800043e   0x0800043e   0x00000002   PAD
-    0x08000440   0x08000440   0x00000084   Code   RO           99    i.EXTI9_5_IRQHandler  main.o
-    0x080004c4   0x080004c4   0x0000008c   Code   RO          100    i.EXTI_A8_config    main.o
-    0x08000550   0x08000550   0x0000002c   Code   RO            4    i.I2C_Address       i2c.o
-    0x0800057c   0x0800057c   0x00000114   Code   RO            5    i.I2C_Read          i2c.o
-    0x08000690   0x08000690   0x00000028   Code   RO            6    i.I2C_Write         i2c.o
-    0x080006b8   0x080006b8   0x00000078   Code   RO          290    i.InitGPIO          gpio.o
-    0x08000730   0x08000730   0x00000070   Code   RO          155    i.MPU6050_Counter   mpu6050.o
-    0x080007a0   0x080007a0   0x00000048   Code   RO          156    i.MPU6050_Init      mpu6050.o
-    0x080007e8   0x080007e8   0x0000004c   Code   RO          159    i.MPU6050_Read_AccelZ  mpu6050.o
-    0x08000834   0x08000834   0x00000034   Code   RO          163    i.MPU_Read          mpu6050.o
-    0x08000868   0x08000868   0x00000024   Code   RO          164    i.MPU_Write         mpu6050.o
-    0x0800088c   0x0800088c   0x00000008   Code   RO          321    i.SetSysClock       system_stm32f10x.o
-    0x08000894   0x08000894   0x000000e0   Code   RO          322    i.SetSysClockTo72   system_stm32f10x.o
-    0x08000974   0x08000974   0x00000060   Code   RO          324    i.SystemInit        system_stm32f10x.o
-    0x080009d4   0x080009d4   0x00000022   Code   RO          236    i.delay_ms          lcd.o
-    0x080009f6   0x080009f6   0x00000002   PAD
-    0x080009f8   0x080009f8   0x00000080   Code   RO            7    i.i2c_init          i2c.o
-    0x08000a78   0x08000a78   0x00000030   Code   RO            8    i.i2c_sendAddress   i2c.o
-    0x08000aa8   0x08000aa8   0x00000024   Code   RO            9    i.i2c_start         i2c.o
-    0x08000acc   0x08000acc   0x00000014   Code   RO           10    i.i2c_stop          i2c.o
-    0x08000ae0   0x08000ae0   0x00000028   Code   RO           11    i.i2c_writeByte     i2c.o
-    0x08000b08   0x08000b08   0x00000070   Code   RO          237    i.lcd_init          lcd.o
-    0x08000b78   0x08000b78   0x00000024   Code   RO          238    i.lcd_put_cur       lcd.o
-    0x08000b9c   0x08000b9c   0x00000040   Code   RO          239    i.lcd_send_cmd      lcd.o
-    0x08000bdc   0x08000bdc   0x00000040   Code   RO          240    i.lcd_send_data     lcd.o
-    0x08000c1c   0x08000c1c   0x00000016   Code   RO          241    i.lcd_send_string   lcd.o
-    0x08000c32   0x08000c32   0x00000002   PAD
-    0x08000c34   0x08000c34   0x00000060   Code   RO          101    i.main              main.o
-    0x08000c94   0x08000c94   0x00000150   Code   RO          400    x$fpl$dadd          fz_ws.l(daddsub_clz.o)
-    0x08000de4   0x08000de4   0x00000018   Code   RO          452    x$fpl$dcmpinf       fz_ws.l(dcmpi.o)
-    0x08000dfc   0x08000dfc   0x000002b0   Code   RO          407    x$fpl$ddiv          fz_ws.l(ddiv.o)
-    0x080010ac   0x080010ac   0x0000002e   Code   RO          411    x$fpl$dflt          fz_ws.l(dflt_clz.o)
-    0x080010da   0x080010da   0x00000002   PAD
-    0x080010dc   0x080010dc   0x00000078   Code   RO          428    x$fpl$dleqf         fz_ws.l(dleqf.o)
-    0x08001154   0x08001154   0x00000154   Code   RO          416    x$fpl$dmul          fz_ws.l(dmul.o)
-    0x080012a8   0x080012a8   0x0000009c   Code   RO          430    x$fpl$dnaninf       fz_ws.l(dnaninf.o)
-    0x08001344   0x08001344   0x0000000c   Code   RO          432    x$fpl$dretinf       fz_ws.l(dretinf.o)
-    0x08001350   0x08001350   0x0000006c   Code   RO          418    x$fpl$drleqf        fz_ws.l(drleqf.o)
-    0x080013bc   0x080013bc   0x000001d4   Code   RO          402    x$fpl$dsub          fz_ws.l(daddsub_clz.o)
-    0x08001590   0x08001590   0x00000000   Code   RO          434    x$fpl$usenofp       fz_ws.l(usenofp.o)
-    0x08001590   0x08001590   0x00000020   Data   RO          591    Region$$Table       anon$$obj.o
+    0x08000440   0x08000440   0x00000038   Code   RO           99    i.EXTI9_5_IRQHandler  main.o
+    0x08000478   0x08000478   0x0000008c   Code   RO          100    i.EXTI_A9_config    main.o
+    0x08000504   0x08000504   0x0000002c   Code   RO            4    i.I2C_Address       i2c.o
+    0x08000530   0x08000530   0x00000114   Code   RO            5    i.I2C_Read          i2c.o
+    0x08000644   0x08000644   0x00000028   Code   RO            6    i.I2C_Write         i2c.o
+    0x0800066c   0x0800066c   0x00000064   Code   RO          290    i.InitGPIO          gpio.o
+    0x080006d0   0x080006d0   0x00000070   Code   RO          155    i.MPU6050_Counter   mpu6050.o
+    0x08000740   0x08000740   0x00000048   Code   RO          156    i.MPU6050_Init      mpu6050.o
+    0x08000788   0x08000788   0x0000004c   Code   RO          159    i.MPU6050_Read_AccelZ  mpu6050.o
+    0x080007d4   0x080007d4   0x00000034   Code   RO          163    i.MPU_Read          mpu6050.o
+    0x08000808   0x08000808   0x00000024   Code   RO          164    i.MPU_Write         mpu6050.o
+    0x0800082c   0x0800082c   0x00000008   Code   RO          321    i.SetSysClock       system_stm32f10x.o
+    0x08000834   0x08000834   0x000000e0   Code   RO          322    i.SetSysClockTo72   system_stm32f10x.o
+    0x08000914   0x08000914   0x00000060   Code   RO          324    i.SystemInit        system_stm32f10x.o
+    0x08000974   0x08000974   0x00000022   Code   RO          236    i.delay_ms          lcd.o
+    0x08000996   0x08000996   0x00000002   PAD
+    0x08000998   0x08000998   0x00000080   Code   RO            7    i.i2c_init          i2c.o
+    0x08000a18   0x08000a18   0x00000030   Code   RO            8    i.i2c_sendAddress   i2c.o
+    0x08000a48   0x08000a48   0x00000024   Code   RO            9    i.i2c_start         i2c.o
+    0x08000a6c   0x08000a6c   0x00000014   Code   RO           10    i.i2c_stop          i2c.o
+    0x08000a80   0x08000a80   0x00000028   Code   RO           11    i.i2c_writeByte     i2c.o
+    0x08000aa8   0x08000aa8   0x00000070   Code   RO          237    i.lcd_init          lcd.o
+    0x08000b18   0x08000b18   0x00000024   Code   RO          238    i.lcd_put_cur       lcd.o
+    0x08000b3c   0x08000b3c   0x00000040   Code   RO          239    i.lcd_send_cmd      lcd.o
+    0x08000b7c   0x08000b7c   0x00000040   Code   RO          240    i.lcd_send_data     lcd.o
+    0x08000bbc   0x08000bbc   0x00000016   Code   RO          241    i.lcd_send_string   lcd.o
+    0x08000bd2   0x08000bd2   0x00000002   PAD
+    0x08000bd4   0x08000bd4   0x00000080   Code   RO          101    i.main              main.o
+    0x08000c54   0x08000c54   0x00000150   Code   RO          400    x$fpl$dadd          fz_ws.l(daddsub_clz.o)
+    0x08000da4   0x08000da4   0x00000018   Code   RO          452    x$fpl$dcmpinf       fz_ws.l(dcmpi.o)
+    0x08000dbc   0x08000dbc   0x000002b0   Code   RO          407    x$fpl$ddiv          fz_ws.l(ddiv.o)
+    0x0800106c   0x0800106c   0x0000002e   Code   RO          411    x$fpl$dflt          fz_ws.l(dflt_clz.o)
+    0x0800109a   0x0800109a   0x00000002   PAD
+    0x0800109c   0x0800109c   0x00000078   Code   RO          428    x$fpl$dleqf         fz_ws.l(dleqf.o)
+    0x08001114   0x08001114   0x00000154   Code   RO          416    x$fpl$dmul          fz_ws.l(dmul.o)
+    0x08001268   0x08001268   0x0000009c   Code   RO          430    x$fpl$dnaninf       fz_ws.l(dnaninf.o)
+    0x08001304   0x08001304   0x0000000c   Code   RO          432    x$fpl$dretinf       fz_ws.l(dretinf.o)
+    0x08001310   0x08001310   0x0000006c   Code   RO          418    x$fpl$drleqf        fz_ws.l(drleqf.o)
+    0x0800137c   0x0800137c   0x000001d4   Code   RO          402    x$fpl$dsub          fz_ws.l(daddsub_clz.o)
+    0x08001550   0x08001550   0x00000000   Code   RO          434    x$fpl$usenofp       fz_ws.l(usenofp.o)
+    0x08001550   0x08001550   0x00000020   Data   RO          591    Region$$Table       anon$$obj.o
 
 
-    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x080015b0, Size: 0x00000038, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x08001570, Size: 0x00000038, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x080015b0   0x00000010   Data   RW          102    .data               main.o
-    0x20000010   0x080015c0   0x00000028   Data   RW          165    .data               mpu6050.o
+    0x20000000   0x08001570   0x0000000c   Data   RW          102    .data               main.o
+    0x2000000c   0x0800157c   0x00000004   PAD
+    0x20000010   0x08001580   0x00000028   Data   RW          165    .data               mpu6050.o
 
 
-    Execution Region ER_ZI (Exec base: 0x20000038, Load base: 0x080015e8, Size: 0x00000660, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_ZI (Exec base: 0x20000038, Load base: 0x080015a8, Size: 0x00000660, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -856,18 +859,18 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       120         12          0          0          0        419   gpio.o
+       100         14          0          0          0        403   gpio.o
        632         46          0          0          0     212089   i2c.o
        332          0          0          0          0       3437   lcd.o
-       368         54          0         16          0      27694   main.o
+       324         46          0         12          0      27568   main.o
        348         32          0         40          0       3662   mpu6050.o
         64         26        236          0       1536        820   startup_stm32f10x_md.o
        328         28          0          0          0       2109   system_stm32f10x.o
 
     ----------------------------------------------------------------------
-      2196        198        268         56       1536     250230   Object Totals
+      2132        192        268         56       1536     250088   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-         4          0          0          0          0          0   (incl. Padding)
+         4          0          0          4          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -934,15 +937,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      5284        418        268         56       1632     250190   Grand Totals
-      5284        418        268         56       1632     250190   ELF Image Totals
-      5284        418        268         56          0          0   ROM Totals
+      5220        412        268         56       1632     250048   Grand Totals
+      5220        412        268         56       1632     250048   ELF Image Totals
+      5220        412        268         56          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 5552 (   5.42kB)
+    Total RO  Size (Code + RO Data)                 5488 (   5.36kB)
     Total RW  Size (RW Data + ZI Data)              1688 (   1.65kB)
-    Total ROM Size (Code + RO Data + RW Data)       5608 (   5.48kB)
+    Total ROM Size (Code + RO Data + RW Data)       5544 (   5.41kB)
 
 ==============================================================================
 

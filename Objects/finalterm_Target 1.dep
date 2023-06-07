@@ -1,5 +1,5 @@
 Dependencies for Project 'finalterm', Target 'Target 1': (DO NOT MODIFY !)
-F (.\i2c.c)(0x647FBC4E)(--c99 --gnu -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\STM32F103C8-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD-o .\objects\i2c.o --omf_browse .\objects\i2c.crf --depend .\objects\i2c.d)
+F (.\i2c.c)(0x647FBF4D)(--c99 --gnu -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\STM32F103C8-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD-o .\objects\i2c.o --omf_browse .\objects\i2c.crf --depend .\objects\i2c.d)
 I (C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x61AD876E)
 I (.\RTE\_Target_1\RTE_Components.h)(0x647EECD6)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm3.h)(0x5B617E94)
@@ -10,7 +10,7 @@ I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B617
 I (C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x61AD876E)
 F (.\i2c.h)(0x647EFAD7)()
 F (.\MPU6050.h)(0x647FBC02)()
-F (.\main.c)(0x647FBC99)(--c99 --gnu -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\STM32F103C8-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (.\main.c)(0x64806290)(--c99 --gnu -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\STM32F103C8-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x61AD876E)
 I (.\RTE\_Target_1\RTE_Components.h)(0x647EECD6)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm3.h)(0x5B617E94)
@@ -47,7 +47,7 @@ I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5B617
 I (C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include\system_stm32f10x.h)(0x61AD876E)
 I (i2c.h)(0x647EFAD7)
 F (.\lcd.h)(0x64774D40)()
-F (.\GPIO.c)(0x647FBD66)(--c99 --gnu -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\STM32F103C8-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD-o .\objects\gpio.o --omf_browse .\objects\gpio.crf --depend .\objects\gpio.d)
+F (.\GPIO.c)(0x64806005)(--c99 --gnu -c --cpu Cortex-M3 -D__EVAL -g -O0 --apcs=interwork --split_sections-I.\RTE\Device\STM32F103C8-I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include-D__UVISION_VERSION="526" -D_RTE_ -DSTM32F10X_MD-o .\objects\gpio.o --omf_browse .\objects\gpio.crf --depend .\objects\gpio.d)
 I (C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include\stm32f10x.h)(0x61AD876E)
 I (.\RTE\_Target_1\RTE_Components.h)(0x647EECD6)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.4.0\CMSIS\Core\Include\core_cm3.h)(0x5B617E94)
